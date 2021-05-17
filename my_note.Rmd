@@ -426,6 +426,18 @@ Thông tin Fisher - sẽ tìm hiểu thêm sau khi cần thiết.
 
 > Với **1 cách tính khoảng tin cậy 95% xác định**, với **1 sample X xác định** thì ta tính được khoảng tin cậy $L_x$ đến $U_x$; có nghĩa là nếu ta lấy thêm 100 samples nữa, Y, Z, K, ... thì 95 samples trong số đó, khi áp dụng cách tính khoảng tin cậy trên, ra được các khoảng $L_y, U_y$; $L_k, U_k$ chứa true parameter.
 
+## Test liệu có phải phân phối normal
+
+Có thể dùng `qqline` function để test xem mẫu có phân phối chuẩn không.
+
+Nếu plot càng gần với đường chéo thì càng chứng tỏ là normal
+
+```{r}
+qqnorm(rnorm(n=50))
+qqline(rnorm(n=50))
+```
+
+
 ## CI for Population Means
 
 ### Sampling từ **phân phối chuẩn** và **biết $\sigma^2$ của tổng thể**
